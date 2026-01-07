@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Book Master</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<h4 align="left">Book Master</h4>
+<body>
+	
+	<table align="center" width="60%">
+	<tr><td>
+		<form name="bookmaster" class="form-control" method="POST" autocomplete="off">
+	
+	<br>
+	<h5 align="center">{{msg}}</h5>
+	<font color="red">*</font> Book Title
+	<input type="text" required name="booktitle" autofocus="on" class="form-control"><br>
+	<font color="red">*</font>ISBN
+	<input type="text" required name="isbn" class="form-control"><br>
+	<font color="red">*</font> Author
+	<input type="text" required name="author" class="form-control"><br>
+	<font color="red">*</font> Edition
+	<input type="text" required name="edition" class="form-control"><br>
+	<font color="red">*</font> Cost
+	<input type="number" required name="cost" class="form-control"><br>
+	<font color="red">*</font> Department
+	<select name="department" class="form-select"><br>
+		<option>Computer Science and Engineering</option>
+		<option>Electronics and Communication</option>
+		<option>Civil</option>
+		<option>Mechanical</option>
+	</select><br>
+	<font color="red">*</font> Quantity
+	<input type="number" required name="quantity" class="form-control"><br>
+	<font color="red">*</font>BookRow
+	<input type="text" required name="bookrow" class="form-control"><br>
+	<font color="red">*</font>BookColumn
+	<input type="text" required name="bookcolumn" class="form-control"><br>
+	<font color="red">*</font>BookRack
+	<input type="text" required name="bookrack" class="form-control"><br>
+	<center>
+	<input type="submit" name="submit" value="Submit" class="btn btn-success">
+	<input type="reset" name="cancel" value="Cancel" class="btn btn-warning">
+	</center>
+	{% csrf_token %}
+	</form>
+	</td></tr>
+</table>
+</body>
+</html>

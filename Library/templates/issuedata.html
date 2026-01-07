@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Issue Book</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+<body>
+	<table align="center" border="1">
+		<tr>{% for b in data %}
+			<td> <th>Book ISBN</th> </td>
+			<td>
+			{{b.bookisbn}}</td>
+		</tr>
+		<tr>
+			<td> <th>Book Status</th> </td>
+			<td> {{b.bookstatus}} </td>
+		</tr>
+		<tr>
+			<td> <th>Faculty ID</th> </td>
+			<td>{{b.}} </td>
+		</tr>
+		<tr>
+			<td> <th>Student ID</th> </td>
+			<td>  </td>
+		</tr> {% endfor %}
+		<td>
+			<form name="frm" method="post">
+			<input type="hidden" name="sid" value="{{d.id}}" class="btn btn-primary">
+			{% csrf_token %}
+			</form>
+		</td>
+		
+	</table>
+
+</body>
+</html>
